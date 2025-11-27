@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#FF6B9D">
+    <title>BDSM恋爱倾向测试</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- SVG图标库 -->
+    <svg style="display: none;">
+        <defs>
+            <!-- 心形图标 -->
+            <symbol id="icon-heart" viewBox="0 0 24 24">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </symbol>
+
+            <!-- 火焰图标 -->
+            <symbol id="icon-flame" viewBox="0 0 24 24">
+                <path d="M12 2s-4 8-4 12c0 2.21 1.79 4 4 4s4-1.79 4-4c0-4-4-12-4-12z M12 18c-1.66 0-3-1.34-3-3 0-2 2-6 3-8.5 1 2.5 3 6.5 3 8.5 0 1.66-1.34 3-3 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </symbol>
+
+            <!-- 皇冠图标 -->
+            <symbol id="icon-crown" viewBox="0 0 24 24">
+                <path d="M3 18h18v2H3v-2zm0-6l3-3 3 3 3-6 3 6 3-3 3 3v6H3v-6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </symbol>
+
+            <!-- 星星图标 -->
+            <symbol id="icon-star" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </symbol>
+
+            <!-- 闪电图标 -->
+            <symbol id="icon-zap" viewBox="0 0 24 24">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </symbol>
+
+            <!-- 羽毛图标 -->
+            <symbol id="icon-feather" viewBox="0 0 24 24">
+                <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z M16 8L2 22 M17.5 15H9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </symbol>
+
+            <!-- 检查图标 -->
+            <symbol id="icon-check" viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </symbol>
+
+            <!-- 分享图标 -->
+            <symbol id="icon-share" viewBox="0 0 24 24">
+                <circle cx="18" cy="5" r="3" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="6" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="18" cy="19" r="3" fill="none" stroke="currentColor" stroke-width="2"/>
+                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" stroke="currentColor" stroke-width="2"/>
+                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" stroke="currentColor" stroke-width="2"/>
+            </symbol>
+
+            <!-- 下载图标 -->
+            <symbol id="icon-download" viewBox="0 0 24 24">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4 M7 10l5 5 5-5 M12 15V3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </symbol>
+
+            <!-- 刷新图标 -->
+            <symbol id="icon-refresh" viewBox="0 0 24 24">
+                <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </symbol>
+
+            <!-- 箭头图标 -->
+            <symbol id="icon-arrow-right" viewBox="0 0 24 24">
+                <line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <polyline points="12 5 19 12 12 19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </symbol>
+
+            <!-- BDSM 专用图标 -->
+
+            <!-- 绳缚图标 (Bondage) -->
+            <symbol id="icon-bondage" viewBox="0 0 48 48">
+                <path d="M16 8 C8 12, 8 20, 12 24 C16 28, 20 28, 24 24 C28 20, 28 12, 32 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M12 24 C12 28, 16 32, 20 36 C24 40, 28 40, 32 36 C36 32, 36 28, 36 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="18" y1="12" x2="30" y2="12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="20" y1="20" x2="28" y2="20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="24" cy="30" r="2" fill="currentColor"/>
+            </symbol>
+
+            <!-- 支配者图标 (Dominant) -->
+            <symbol id="icon-dominant" viewBox="0 0 48 48">
+                <circle cx="24" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                <line x1="24" y1="17" x2="24" y2="28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="16" y1="22" x2="32" y2="22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="24" y1="28" x2="18" y2="38" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="24" y1="28" x2="30" y2="38" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M20 6 L24 2 L28 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </symbol>
+
+            <!-- 顺从者图标 (Submissive) -->
+            <symbol id="icon-submissive" viewBox="0 0 48 48">
+                <circle cx="24" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                <line x1="24" y1="17" x2="24" y2="26" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M16 24 Q20 28, 24 26 Q28 28, 32 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="24" y1="26" x2="20" y2="38" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="24" y1="26" x2="28" y2="38" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M20 42 L24 46 L28 42" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </symbol>
+
+            <!-- 施虐图标 (Sadist) - 鞭子 -->
+            <symbol id="icon-sadist" viewBox="0 0 48 48">
+                <path d="M8 8 L18 18 M18 18 Q24 24, 28 32 T32 40" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="8" cy="8" r="3" fill="currentColor"/>
+                <path d="M32 36 Q34 38, 36 40 Q38 42, 40 40 Q42 38, 40 36" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </symbol>
+
+            <!-- 受虐图标 (Masochist) - 心形+火焰 -->
+            <symbol id="icon-masochist" viewBox="0 0 48 48">
+                <path d="M24 38 L14 26 C10 22, 10 16, 14 12 C18 8, 22 10, 24 14 C26 10, 30 8, 34 12 C38 16, 38 22, 34 26 Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M24 18 Q22 22, 24 26 Q26 22, 24 18" fill="currentColor"/>
+                <path d="M20 22 Q22 20, 24 22" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M24 22 Q26 20, 28 22" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            </symbol>
+
+            <!-- 切换者图标 (Switch) - 循环箭头 -->
+            <symbol id="icon-switch" viewBox="0 0 48 48">
+                <path d="M34 16 L34 12 L38 16 L34 20 L34 16 C28 16, 24 20, 24 26" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M14 32 L14 36 L10 32 L14 28 L14 32 C20 32, 24 28, 24 22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </symbol>
+
+            <!-- 24/7 图标 -->
+            <symbol id="icon-24-7" viewBox="0 0 48 48">
+                <circle cx="24" cy="24" r="18" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                <text x="24" y="28" text-anchor="middle" font-size="12" font-weight="bold" fill="currentColor">24/7</text>
+                <path d="M24 8 L24 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </symbol>
+
+            <!-- 恋痛图标 -->
+            <symbol id="icon-pain" viewBox="0 0 48 48">
+                <path d="M24 10 L26 16 L32 16 L27 20 L29 26 L24 22 L19 26 L21 20 L16 16 L22 16 Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="24" cy="34" r="3" fill="currentColor"/>
+                <circle cx="18" cy="28" r="2" fill="currentColor"/>
+                <circle cx="30" cy="28" r="2" fill="currentColor"/>
+            </symbol>
+
+            <!-- 露出图标 -->
+            <symbol id="icon-exhibition" viewBox="0 0 48 48">
+                <circle cx="24" cy="24" r="10" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                <circle cx="24" cy="24" r="4" fill="currentColor"/>
+                <path d="M12 24 Q16 18, 24 18 Q32 18, 36 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M12 24 Q16 30, 24 30 Q32 30, 36 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </symbol>
+        </defs>
+    </svg>
+
+    <!-- 欢迎页面 -->
+    <div id="welcome-page" class="page active">
+        <div class="container">
+            <div class="welcome-content">
+                <!-- 装饰性图标 -->
+                <div class="hero-icon">
+                    <svg class="icon icon-hero"><use href="#icon-heart"/></svg>
+                </div>
+
+                <h1 class="title fade-in">BDSM 倾向测试</h1>
+                <p class="subtitle fade-in-delay">探索你在亲密关系中的真实自我</p>
+
+                <div class="intro-card fade-in-delay-2">
+                    <div class="card-header">
+                        <svg class="icon icon-sm"><use href="#icon-feather"/></svg>
+                        <h2>测试说明</h2>
+                    </div>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <div class="info-number">50</div>
+                            <div class="info-label">道题目</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-number">8-12</div>
+                            <div class="info-label">分钟</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-number">5</div>
+                            <div class="info-label">个维度</div>
+                        </div>
+                    </div>
+                    <p class="intro-text">请根据真实感受选择，没有对错之分</p>
+                </div>
+
+                <div class="personality-types fade-in-delay-3">
+                    <h3 class="section-title">
+                        <svg class="icon icon-sm"><use href="#icon-star"/></svg>
+                        测试维度
+                    </h3>
+                    <div class="types-grid">
+                        <div class="type-item">
+                            <div class="type-letter">B</div>
+                            <div class="type-name">绳缚</div>
+                            <div class="type-desc">Bondage</div>
+                        </div>
+                        <div class="type-item">
+                            <div class="type-letter">D</div>
+                            <div class="type-name">支配</div>
+                            <div class="type-desc">Dominant</div>
+                        </div>
+                        <div class="type-item">
+                            <div class="type-letter">S</div>
+                            <div class="type-name">顺从</div>
+                            <div class="type-desc">Submissive</div>
+                        </div>
+                        <div class="type-item">
+                            <div class="type-letter">M</div>
+                            <div class="type-name">受虐</div>
+                            <div class="type-desc">Masochist</div>
+                        </div>
+                        <div class="type-item">
+                            <div class="type-letter">Sw</div>
+                            <div class="type-name">切换</div>
+                            <div class="type-desc">Switch</div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="start-btn" onclick="startTest()">
+                    <span>开始测试</span>
+                    <svg class="icon icon-btn"><use href="#icon-arrow-right"/></svg>
+                </button>
+
+                <div class="privacy-note fade-in-delay-4">
+                    <svg class="icon icon-xs"><use href="#icon-check"/></svg>
+                    所有数据仅存储在本地，保护您的隐私
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 测试页面 -->
+    <div id="test-page" class="page">
+        <div class="container">
+            <div class="test-header">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="progress-text" id="progress-text">1/50</div>
+            </div>
+
+            <div class="question-container" id="question-container">
+                <div class="question-number">题目 <span id="q-num">1</span></div>
+                <h2 class="question" id="question"></h2>
+                <div class="options" id="options"></div>
+            </div>
+
+            <div class="navigation">
+                <button class="nav-btn prev-btn" id="prev-btn" onclick="prevQuestion()">
+                    <svg class="icon icon-sm"><use href="#icon-arrow-right" style="transform: rotate(180deg)"/></svg>
+                    <span>上一题</span>
+                </button>
+                <button class="nav-btn next-btn" id="next-btn" onclick="nextQuestion()" disabled>
+                    <span>下一题</span>
+                    <svg class="icon icon-sm"><use href="#icon-arrow-right"/></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 结果页面 -->
+    <div id="result-page" class="page">
+        <div class="container">
+            <div class="result-content">
+                <div class="result-header">
+                    <svg class="icon icon-lg"><use href="#icon-star"/></svg>
+                    <h1 class="title fade-in">测试结果</h1>
+                </div>
+
+                <div class="result-chart" id="result-chart">
+                    <!-- 雷达图将在这里生成 -->
+                </div>
+
+                <div class="result-details" id="result-details">
+                    <!-- 详细结果将在这里显示 -->
+                </div>
+
+                <div class="result-actions">
+                    <button class="action-btn primary" onclick="downloadResultImage()">
+                        <svg class="icon icon-sm"><use href="#icon-download"/></svg>
+                        <span>保存图片</span>
+                    </button>
+                    <button class="action-btn secondary" onclick="shareResult()">
+                        <svg class="icon icon-sm"><use href="#icon-share"/></svg>
+                        <span>分享结果</span>
+                    </button>
+                    <button class="action-btn outline" onclick="restartTest()">
+                        <svg class="icon icon-sm"><use href="#icon-refresh"/></svg>
+                        <span>重新测试</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- html2canvas库 用于截图 -->
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
